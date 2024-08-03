@@ -1,58 +1,3 @@
-// // Define your questions and answers here
-// const questions = [
-//   {
-//     question: "What is 2 + 2?",
-//     options: ["3", "4", "5", "6"],
-//     correctAnswer: 1, // Index of the correct option
-//   },
-//   {
-//     question: "What is the capital of Italy?",
-//     options: ["Madrid", "Paris", "Rome", "Berlin"],
-//     correctAnswer: 2,
-//   },
-//   {
-//     question: "Which planet is closest to the Sun?",
-//     options: ["Mars", "Jupiter", "Venus", "Saturn"],
-//     correctAnswer: 2,
-//   },
-//   {
-//     question: "What is the largest mammal in the world?",
-//     options: ["Elephant", "Giraffe", "Blue Whale", "Lion"],
-//     correctAnswer: 2,
-//   },
-//   {
-//     question: "What is the chemical symbol for gold?",
-//     options: ["Au", "Ag", "Hg", "Pb"],
-//     correctAnswer: 0,
-//   },
-//   {
-//     question: "Which gas do plants absorb from the atmosphere?",
-//     options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
-//     correctAnswer: 1,
-//   },
-//   {
-//     question: "What is the currency of Japan?",
-//     options: ["Yen", "Dollar", "Euro", "Pound"],
-//     correctAnswer: 0,
-//   },
-//   {
-//     question: "Which country is known as the Land of the Rising Sun?",
-//     options: ["China", "Korea", "Japan", "Vietnam"],
-//     correctAnswer: 2,
-//   },
-//   {
-//     question: "What is the largest planet in our solar system?",
-//     options: ["Mars", "Jupiter", "Venus", "Saturn"],
-//     correctAnswer: 1,
-//   },
-//   {
-//     question: "What is the freezing point of water in Fahrenheit?",
-//     options: ["0°F", "32°F", "100°F", "212°F"],
-//     correctAnswer: 1,
-//   },
-//   // Add more questions here
-// ];
-
 // let currentQuestion = 0;
 // let score = 0;
 
@@ -145,58 +90,57 @@
 // Define your questions and answers here
 const questions = [
   {
-    question: "What is 2 + 2?",
-    options: ["3", "4", "5", "6"],
-    correctAnswer: 1, // Index of the correct option
+    question: "What is my full name?",
+    options: ["Aditya Raj", "Aditya Patel", "Aditya Raj Patel", "None"],
+    correctAnswer: 2, // Index of the correct option
   },
   {
-    question: "What is the capital of Italy?",
-    options: ["Madrid", "Paris", "Rome", "Berlin"],
-    correctAnswer: 2,
-  },
-  {
-    question: "Which planet is closest to the Sun?",
-    options: ["Mars", "Jupiter", "Venus", "Saturn"],
-    correctAnswer: 2,
-  },
-  {
-    question: "What is the largest mammal in the world?",
-    options: ["Elephant", "Giraffe", "Blue Whale", "Lion"],
-    correctAnswer: 2,
-  },
-  {
-    question: "What is the chemical symbol for gold?",
-    options: ["Au", "Ag", "Hg", "Pb"],
+    question: "What is Aditya's field of study?",
+    options: ["Data Science Engineering", "Mechanical Engineering", "Business Administration", "Ancient Alien Theory"],
     correctAnswer: 0,
   },
   {
-    question: "Which gas do plants absorb from the atmosphere?",
-    options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    question: "What position does Aditya hold in his university's club?",
+    options: ["Treasurer of Goonj","President of The Data Alchemists", "President of Goonj", "All the Above"],
     correctAnswer: 1,
   },
   {
-    question: "What is the currency of Japan?",
-    options: ["Yen", "Dollar", "Euro", "Pound"],
-    correctAnswer: 0,
-  },
-  {
-    question: "Which country is known as the Land of the Rising Sun?",
-    options: ["China", "Korea", "Japan", "Vietnam"],
+    question: "Which training program did Aditya participate in related to AI?",
+    options: ["Google AI Residency", "Facebook AI Research Internship", "Amazon Machine Learning Summer School", "IBM Quantum Computing Workshop"],
     correctAnswer: 2,
   },
   {
-    question: "What is the largest planet in our solar system?",
-    options: ["Mars", "Jupiter", "Venus", "Saturn"],
+    question: "What is Aditya's primary email ID for professional and academic correspondence?",
+    options: ["adityaraj006005@gmail.com", "aditya.techwizard@mit.edu", "contact@adityaraj.dev", "aditya123@outlook.com"],
+    correctAnswer: 0,
+  },
+  {
+    question: "Which city is Aditya's hometown?",
+    options: ["Delhi", "Patna", "Siwan", "Muzaffarpur"],
+    correctAnswer: 3,
+  },
+  {
+    question: "Which food does Aditya not like?",
+    options: ["Curd", "Pizza", "Noddles", "Pasta"],
+    correctAnswer: 0,
+  },
+  {
+    question: "What is Aditya's favorite hobby?",
+    options: ["Painting", "Hiking", "Playing cricket", "Reading novels"],
+    correctAnswer: 2,
+  },
+  {
+    question: "What is Aditya's favorite movie?",
+    options: ["Inception", "Bahubali", "The Godfather", "Forrest Gump"],
     correctAnswer: 1,
   },
   {
-    question: "What is the freezing point of water in Fahrenheit?",
-    options: ["0°F", "32°F", "100°F", "212°F"],
+    question: "In which city does Aditya's university, Manipal Institute of Technology, located?",
+    options: ["Bangalore", "Udupi", "Goa", "New York"],
     correctAnswer: 1,
   },
-  // Add more questions here
+  
 ];
-
 let currentQuestion = 0;
 let score = 0;
 
@@ -208,45 +152,28 @@ const nextButton = document.getElementById("next-button");
 const scoreboard = document.querySelector(".scoreboard");
 const finalScore = document.getElementById("final-score");
 const restartButton = document.getElementById("restart-button");
-
-// Get the "Start Quiz" button and quiz container elements
 const startQuizButton = document.getElementById("start-quiz-button");
 const quizContainer = document.querySelector(".quiz-container");
 
-// Add an event listener to start the quiz when the button is clicked
 startQuizButton.addEventListener("click", () => {
-  // Hide the start button container
   startQuizButton.parentElement.style.display = "none";
-  // Show the quiz container
   quizContainer.style.display = "block";
-  // Start the quiz
   loadQuestion();
 });
 
-// Initially disable the "Next" button
-nextButton.disabled = true;
-
-// Variable to track whether an option has been clicked
-let optionClicked = false;
-
 function loadQuestion() {
   if (currentQuestion < questions.length) {
-    questionCounter.textContent = `Question ${currentQuestion + 1}/${
-      questions.length
-    }`;
+    questionCounter.textContent = `Question ${currentQuestion + 1}/${questions.length}`;
     questionText.textContent = questions[currentQuestion].question;
-
     options.forEach((option, index) => {
       option.textContent = questions[currentQuestion].options[index];
-      option.style.backgroundColor = "white"; // Reset option background color
-      option.style.pointerEvents = "auto"; // Re-enable click events
-      option.onclick = function () {
+      option.style.backgroundColor = "white";
+      option.style.pointerEvents = "auto";
+      option.onclick = function() {
         handleOptionClick(index);
       };
     });
-
-    // Re-enable the "Next" button only if an option has been clicked
-    nextButton.disabled = !optionClicked;
+    nextButton.disabled = true;
   } else {
     showScoreboard();
   }
@@ -254,46 +181,37 @@ function loadQuestion() {
 
 function handleOptionClick(selectedOptionIndex) {
   const correctAnswerIndex = questions[currentQuestion].correctAnswer;
-
-  // Remove click event listeners from all options to prevent multiple clicks
   options.forEach((option) => {
     option.style.pointerEvents = "none";
-    option.onclick = null;
   });
-
   if (selectedOptionIndex === correctAnswerIndex) {
     options[selectedOptionIndex].style.backgroundColor = "green";
     score++;
-    scoreCounter.textContent = `Score: ${score}`;
   } else {
     options[selectedOptionIndex].style.backgroundColor = "red";
     options[correctAnswerIndex].style.backgroundColor = "green";
   }
-
-  optionClicked = true; // Mark an option as clicked
+  scoreCounter.textContent = `Score: ${score}`;
   nextButton.disabled = false;
 }
 
 function showScoreboard() {
+  quizContainer.style.display = "none";
   scoreboard.style.display = "block";
   finalScore.textContent = score;
 }
 
 nextButton.addEventListener("click", () => {
   currentQuestion++;
-  optionClicked = false; // Reset optionClicked flag
-  nextButton.disabled = true;
   loadQuestion();
 });
 
 restartButton.addEventListener("click", () => {
   currentQuestion = 0;
   score = 0;
+  quizContainer.style.display = "block";
   scoreboard.style.display = "none";
   loadQuestion();
   scoreCounter.textContent = "Score: 0";
-  optionClicked = false; // Reset optionClicked flag
 });
 
-// Initialize the quiz
-loadQuestion();

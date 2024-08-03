@@ -1,73 +1,67 @@
-/* Reset some default styles */
+/* Reset some default styles and set text color */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: black; /* Ensure text is generally black for visibility */
 }
 
-.start-button-container {
-  text-align: center;
-  margin: 50px 0;
-}
-
-#start-quiz-button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 10px auto;
-  cursor: pointer;
-}
-
-/* Style the quiz container */
-.quiz-container {
-  display: none;
-  max-width: 600px;
-  margin: 40px auto 0 auto;
-  padding: 20px;
-  text-align: center;
-  border: 2px solid darkgrey;
-}
-
-/* Style the quiz header */
-.quiz-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-}
-
-/* Style the quiz name */
-.quiz-header h1 {
-  font-size: 24px;
-}
-
-/* Style the question counter and score */
-.quiz-stats {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-/* Style the question and options */
-.question {
-  margin-top: 20px;
-  text-align: left;
-}
-
-/* Style question text */
-#question-text {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* Style options */
-.options {
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  background-color: #ADD8E6; /* Light blue background */
 }
 
-/* Style individual options */
+.creator-name {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.start-button-container {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  width: 50%; /* Adjust width to center it appropriately */
+  text-align: center;
+}
+
+.quiz-container {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  width: 800px; /* Fixed width for larger quiz box */
+  height: 500px; /* Increased height for more content */
+  text-align: center;
+}
+
+.scoreboard {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  width: 800px;
+  text-align: center;
+  display: none; /* Hide initially */
+}
+
+/* General style for all buttons */
+button {
+  background-color: black; /* Black background for specific buttons */
+  color: white; /* White text for visibility */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
 .option {
+  background-color: white; /* White background for options */
+  color: black; /* Black text for readability */
   padding: 10px;
   margin: 5px;
   border: 1px solid #ccc;
@@ -75,37 +69,6 @@
   width: 100%;
 }
 
-/* Style the next button */
-#next-button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-/* Style the scoreboard */
-.scoreboard {
-  display: none;
-  width: max-content;
-  margin: 20px auto;
-  border: 2px solid black;
-  text-align: center;
-  padding: 20px 40px;
-}
-
-/* Style the final score */
-#final-score {
-  font-size: 24px;
-  color: #333;
-  font-weight: bold;
-}
-
-/* Style the restart button */
-#restart-button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 10px auto;
-  cursor: pointer;
+.option:hover {
+  background-color: #B0E0E6; /* Light blue background on hover */
 }
