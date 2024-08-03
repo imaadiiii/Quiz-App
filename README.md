@@ -1,7 +1,3 @@
-Here's an enhanced README for your quiz app project:
-
----
-
 # Quiz App
 
 ## Overview
